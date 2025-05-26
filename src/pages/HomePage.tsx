@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import React from 'react';
 import {
     HeroSection, FeaturesSection, HowItWorksSection, 
@@ -44,4 +43,8 @@ export function HomePage() {
       <Footer />
     </div>
   );
+}
+
+export default function Home1() {
+  return <>{/* nothing */}</>;
 }
