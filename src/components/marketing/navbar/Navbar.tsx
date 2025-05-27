@@ -1,9 +1,10 @@
 import React, { JSX, useEffect, useState } from 'react';
-import Logo from './Logo';
+import Logo from '../../Logo';
 import DesktopMenu from './DesktopMenu';
 import AuthButtons from './AuthButtons';
 import MobileMenuToggle from './MobileMenuToggle';
 import MobileMenu from './MobileMenu';
+import { motion } from 'framer-motion';
 
 export function Navbar(): JSX.Element {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,14 @@ export function Navbar(): JSX.Element {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
-                        <Logo isScrolled={isScrolled} />
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="text-2xl font-bold"
+                        >
+                            <Logo isScrolled={isScrolled} />
+                        </motion.div>
                         <DesktopMenu isScrolled={isScrolled} />
                     </div>
 
