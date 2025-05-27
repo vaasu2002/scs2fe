@@ -1,22 +1,19 @@
 'use client';
 import React from 'react';
 import {
-    HeroSection, FeaturesSection, HowItWorksSection, 
-    PricingSection, TestimonialsSection, FaqSection, 
-    CtaSection, Footer 
-} from '@/components/sections/HomeSection';
-import {Navbar} from '@/components/Navbar';
+  HeroSection, FeaturesSection, HowItWorksSection, 
+  PricingSection, TestimonialsSection, FaqSection, 
+  CtaSection 
+} from '@/components/marketing/hero';
+import {Navbar} from '@/components/marketing/navbar/Navbar'
 
 
-export function HomePage() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>
       <Navbar/>
-      
-      {/* Main content sections */}
       <main>
         <HeroSection />
-        
         <section id="features">
           <FeaturesSection />
         </section>
@@ -39,12 +36,6 @@ export function HomePage() {
         
         <CtaSection />
       </main>
-      
-      <Footer />
     </div>
   );
-}
-
-export default function Home1() {
-  return <>{/* nothing */}</>;
 }
